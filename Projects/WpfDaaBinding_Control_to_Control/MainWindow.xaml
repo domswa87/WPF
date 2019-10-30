@@ -1,0 +1,23 @@
+﻿<Window x:Class="WpfDaaBinding_Control_to_Control.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfDaaBinding_Control_to_Control"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="152*" />
+            <ColumnDefinition Width="461*" />
+            <ColumnDefinition Width="179*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="14*" />
+            <RowDefinition Height="182*" />
+            <RowDefinition Height="223*" />
+        </Grid.RowDefinitions>
+        <Slider Name="SliderDS" Grid.Column="1" HorizontalAlignment="Left" Margin="75,36,0,0" Grid.Row="1" VerticalAlignment="Top" Height="18" Width="376" Maximum="1000"/>
+        <TextBox Text="{Binding ElementName=SliderDS, Path=Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="173,107,0,0" Grid.Row="1" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+    </Grid>
+</Window>
