@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="UserControlView.userControl.UserControlDS3"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:UserControlView.userControl"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="200">
+    <Grid>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="75" Margin="45,60,0,0" Stroke="Black" VerticalAlignment="Top" Width="100" RadiusY="29.5" RadiusX="29.5"/>
+
+    </Grid>
+</UserControl>

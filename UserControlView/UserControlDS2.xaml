@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="UserControlView.UserControlDS2"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:UserControlView"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="100">
+    <Grid>
+        <Ellipse Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="50" Margin="20,20,0,0" Stroke="Black" VerticalAlignment="Top" Width="55"/>
+    </Grid>
+</UserControl>

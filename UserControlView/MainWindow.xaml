@@ -1,0 +1,16 @@
+﻿<Window x:Class="UserControlView.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UserControlView"
+        xmlns:localFolder="clr-namespace:UserControlView.userControl"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <local:UserControlDS Margin="0,0,472,254"></local:UserControlDS>
+        <local:UserControlDS2 Margin="320,160,312,134"></local:UserControlDS2>
+        <localFolder:UserControlDS3 Margin="480,60,130,176"></localFolder:UserControlDS3>
+        
+    </Grid>
+</Window>

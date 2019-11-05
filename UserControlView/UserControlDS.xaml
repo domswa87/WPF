@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="UserControlView.UserControlDS"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:UserControlView"
+             mc:Ignorable="d" Width="380" Height="215">
+    <Grid>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="100,70,0,0" VerticalAlignment="Top" Width="175" Height="65"/>
+
+    </Grid>
+</UserControl>
