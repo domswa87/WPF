@@ -19,6 +19,10 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -27,20 +31,17 @@
         </Grid.ColumnDefinitions>
 
         <TextBlock Grid.Row="0" Grid.Column="0" Text="First Name" HorizontalAlignment="Center" Margin="64,0,63,0" Width="56"/>
-        <TextBox Grid.Row="0" Grid.Column="1" Width="100" HorizontalAlignment="Center" Text="{Binding Person.FName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Width="100" HorizontalAlignment="Center" Text="{Binding PersonFName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
         <TextBlock Grid.Row="1" Grid.Column="0" Text="Last Name" HorizontalAlignment="Center" Margin="64,0,63,0" Width="56"/>
-        <TextBox Grid.Row="1" Grid.Column="1" Width="100" HorizontalAlignment="Center" Text="{Binding Person.LName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-        <Button Content="Submit" Command="{Binding SubmitCommand}" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="0" />
-        <ListView ItemsSource="{Binding Persons}" Grid.Row="3" Grid.Column="1" Width="Auto">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="First Name" DisplayMemberBinding="{Binding FName}" Width="Auto"/>
-                    <GridViewColumn Header="Last Name" DisplayMemberBinding="{Binding LName}" Width="Auto"/>
-                    <GridViewColumn Header="Full Name" DisplayMemberBinding="{Binding FullName}" Width="Auto"/>
-                </GridView>
-            </ListView.View>
+        <TextBox Grid.Row="1" Grid.Column="1" Width="100" HorizontalAlignment="Center" Text="{Binding PersonLName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <Button Content="ChangeModel" Command="{Binding SubmitCommand}" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="0" />
+        <Button Content="Refresh" Command="{Binding SubmitCommand2}" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="0" />
 
-        </ListView>
+
+        <TextBlock Grid.Row="4" Grid.Column="0" Text="First Name" HorizontalAlignment="Center" Margin="64,0,63,0" Width="56"/>
+        <TextBlock Grid.Row="5" Grid.Column="0" Text="Last Name" HorizontalAlignment="Center" Margin="64,0,63,0" Width="56"/>
+        <TextBox Grid.Row="4" Grid.Column="1" Width="100" HorizontalAlignment="Center" Text="{Binding PersonFName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox Grid.Row="5" Grid.Column="1" Width="100" HorizontalAlignment="Center" Text="{Binding PersonLName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
 
     </Grid>
 </Window>

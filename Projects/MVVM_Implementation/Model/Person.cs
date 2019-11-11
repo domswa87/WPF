@@ -13,7 +13,7 @@ namespace MVVM_Implementation.Model
         public string FName
         {
             get { return fName; }
-            set { fName = value; } // OnPropertyChanged(FName); }
+            set { fName = value;  OnPropertyChanged(FName); }
         }
 
 
@@ -21,7 +21,7 @@ namespace MVVM_Implementation.Model
         public string LName
         {
             get { return lName; }
-            set { lName = value; } // OnPropertyChanged(LName); }
+            set { lName = value;   OnPropertyChanged(LName); }
         }
 
 
@@ -48,7 +48,7 @@ namespace MVVM_Implementation.Model
         private void OnPropertyChanged(string p)
         {
             PropertyChangedEventHandler ph = PropertyChanged;
-            if (ph!=null)
+            if (ph != null)
             {
                 ph(this, new PropertyChangedEventArgs(p));
             }

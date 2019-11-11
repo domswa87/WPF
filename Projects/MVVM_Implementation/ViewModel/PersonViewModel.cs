@@ -13,34 +13,35 @@ namespace MVVM_Implementation.ViewModel
 {
     public class PersonViewModel : INotifyPropertyChanged
     {
+        public PersonViewModel() => obj = new Person();
 
-        public PersonViewModel()
+        private Person obj;
+
+        public string PersonFName
         {
-            Person = new Person();
-            Persons = new ObservableCollection<Person>();
+            get { return obj.FName;  }
+            set { obj.FName = value;  NotifyPropertyChanged("PersonFName"); }
         }
 
-        private Person _person;
-        public Person Person
+        public string PersonLName
         {
-            get { return _person; }
-            set { _person = value; NotifyPropertyChanged("Person"); }
+            get { return obj.LName; }
+            set { obj.LName = value;  NotifyPropertyChanged("PersonLName"); }
         }
 
-        private ObservableCollection<Person> _persons;
-        public ObservableCollection<Person> Persons
+        #region Commands
+        private void SubmitExecute(object parameter) 
         {
-            get
-            {
-                return _persons;
-            }
-
-            set
-            {
-                _persons = value;
-                NotifyPropertyChanged("Persons");
-            }
+            obj.FName = obj.FName + "a";
         }
+
+        private void SubmitExecute2(object parameter)
+        {
+            PersonFName = PersonFName;
+
+        }
+      
+
         private ICommand _SubmitCommand;
         public ICommand SubmitCommand
         {
@@ -54,14 +55,22 @@ namespace MVVM_Implementation.ViewModel
             }
         }
 
-        private void SubmitExecute(object parameter)
+        private ICommand _SubmitCommand2;
+        public ICommand SubmitCommand2
         {
-            Persons.Add(Person); 
+            get
+            {
+                if (_SubmitCommand2 == null)
+                {
+                    _SubmitCommand2 = new RelayCommand(SubmitExecute2, CanSubmitExecute, false);
+                }
+                return _SubmitCommand2;
+            }
         }
 
         private bool CanSubmitExecute(object parameter)
         {
-            if (string.IsNullOrEmpty(Person.FName) || string.IsNullOrEmpty(Person.LName))
+            if (string.IsNullOrEmpty(obj.FName) || string.IsNullOrEmpty(obj.LName))
             {
                 return false;
             }
@@ -70,7 +79,7 @@ namespace MVVM_Implementation.ViewModel
                 return true;
             }
         }
-
+        #endregion
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected void NotifyPropertyChanged(string propertyName)
