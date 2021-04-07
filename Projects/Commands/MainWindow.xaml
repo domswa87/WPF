@@ -8,11 +8,12 @@
         Title="MainWindow" Height="450" Width="800">
 
     <Window.Resources>
-        <local:ViewModel x:Key="vm"/>
+        <local:MyClassDS x:Key="myKeyDS"/>
     </Window.Resources>
     
     <Grid>
-        <Button Content="Button" Command="{Binding MyCommand, Source={StaticResource vm}}" HorizontalAlignment="Left" Margin="304,144,0,0" VerticalAlignment="Top" Width="197" Height="59"/>
-
+        <StackPanel>
+            <Button Content="Button" Command="{Binding MyCommandDS, Source={StaticResource myKeyDS}}"/>
+        </StackPanel>
     </Grid>
 </Window>

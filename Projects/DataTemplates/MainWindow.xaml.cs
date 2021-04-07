@@ -21,14 +21,14 @@ namespace DataTemplates
     public partial class MainWindow : Window
     {
         public Person PersonOne { get; set; }
+        public Person PersonTwo { get; set; }
+        public Person PersonThree { get; set; }
         public MainWindow()
         {
             InitializeComponent();
-            PersonOne = new Person();
-            PersonOne.FirstName = "Dominik";
-            PersonOne.LastName = "Swatek";
-            PersonOne.Age = 32;
-
+            PersonOne = new Person { FirstName = "Dom", LastName = "Swa", Age = 32 };
+            PersonTwo = new Person { FirstName = "Domi", LastName = "Swat", Age = 33 }; 
+            PersonThree = new Person { FirstName = "Dominik", LastName = "Swatek", Age = 34 };
             this.DataContext = this;
 
         }

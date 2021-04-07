@@ -35,9 +35,9 @@
         </Style>
     </Window.Resources>
 
-
-    <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Height="100" Margin="100,100,0,0" VerticalAlignment="Top" Width="100" Style="{StaticResource blueRectangle}"/>
-        <Button Content="Button" HorizontalAlignment="Left" Height="100" Margin="300,100,0,0" VerticalAlignment="Top" Width="100" Style="{StaticResource redElipse}"/>
-    </Grid>
+    <StackPanel>
+        <Button Content="Button" HorizontalAlignment="Left" Height="50" Margin="100,50,0,0" VerticalAlignment="Top" Width="50" Style="{StaticResource blueRectangle}" Click="Button_Click"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="50" Margin="100,50,0,0" VerticalAlignment="Top" Width="50" Style="{StaticResource redElipse}"/>
+        <Button Content="Button" HorizontalAlignment="Left" Height="50" Margin="100,50,0,0" VerticalAlignment="Top" Width="50" Style="{StaticResource blueRectangle}"/>
+    </StackPanel>
 </Window>

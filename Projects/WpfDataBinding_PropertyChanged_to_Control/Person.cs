@@ -45,7 +45,7 @@ namespace WpfDataBinding
         {
             if (PropertyChanged != null)
             {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertname));
+                PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertname));
             }
         }
 

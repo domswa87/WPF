@@ -13,9 +13,11 @@ namespace MVVM_Implementation.ViewModel
 {
     public class PersonViewModel : INotifyPropertyChanged
     {
-        public PersonViewModel() => obj = new Person();
-
         private Person obj;
+        public PersonViewModel()
+        {
+            obj = new Person();
+        }
 
         public string PersonFName
         {
@@ -86,6 +88,7 @@ namespace MVVM_Implementation.ViewModel
         {
             if (PropertyChanged != null)
             {
+                // nie kumam tego
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }

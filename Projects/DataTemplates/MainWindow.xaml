@@ -20,7 +20,8 @@
     
     <StackPanel>
         <ContentControl Content="{Binding PersonOne}" ContentTemplate="{StaticResource PersonTemplate}"/>
-        <ContentControl Content="{Binding PersonOne}" ContentTemplate="{StaticResource PersonTemplate}"/>
+        <ContentControl Content="{Binding PersonTwo}" ContentTemplate="{StaticResource PersonTemplate}"/>
+        <ContentControl Content="{Binding PersonThree}" ContentTemplate="{StaticResource PersonTemplate}"/>
     </StackPanel>
     
 </Window>

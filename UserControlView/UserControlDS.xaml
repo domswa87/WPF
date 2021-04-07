@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:UserControlView"
              mc:Ignorable="d" Width="380" Height="215">
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="100,70,0,0" VerticalAlignment="Top" Width="175" Height="65"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="100,70,0,0" VerticalAlignment="Top" Width="175" Height="65" Foreground="Blue" Background="Yellow"/>
 
     </Grid>
 </UserControl>

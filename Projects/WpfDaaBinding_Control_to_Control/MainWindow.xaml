@@ -6,18 +6,10 @@
         xmlns:local="clr-namespace:WpfDaaBinding_Control_to_Control"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="152*" />
-            <ColumnDefinition Width="461*" />
-            <ColumnDefinition Width="179*" />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="14*" />
-            <RowDefinition Height="182*" />
-            <RowDefinition Height="223*" />
-        </Grid.RowDefinitions>
-        <Slider Name="SliderDS" Grid.Column="1" HorizontalAlignment="Left" Margin="75,36,0,0" Grid.Row="1" VerticalAlignment="Top" Height="18" Width="376" Maximum="1000"/>
-        <TextBox Text="{Binding ElementName=SliderDS, Path=Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="173,107,0,0" Grid.Row="1" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-    </Grid>
+    <StackPanel>
+        <Slider Name="SliderDS"  Maximum="1000"/>
+        <TextBox Text="{Binding ElementName=SliderDS, Path=Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <CheckBox x:Name="mainCheckBox" Content="mainCheckBox"/>
+        <CheckBox Content ="SecondCheckBox" IsChecked="{Binding ElementName=mainCheckBox, Path=IsChecked, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+    </StackPanel>
 </Window>

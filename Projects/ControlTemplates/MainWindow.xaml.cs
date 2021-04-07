@@ -24,5 +24,10 @@ namespace ControlTemplates
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("This is normal button");
+        }
     }
 }

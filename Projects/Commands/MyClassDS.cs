@@ -8,18 +8,18 @@ using System.Windows.Input;
 
 namespace Commands
 {
-    public class ViewModel
+    public class MyClassDS
     {
-        public ICommand MyCommand { get; set; }
+        public ICommand MyCommandDS { get; set; }
 
-        public ViewModel()
+        public MyClassDS()
         {
-            MyCommand = new Command(ExecuteMethod, canExecuteMethod);
+            MyCommandDS = new Command(ExecuteMethod, canExecuteMethod);
         }
 
         private bool canExecuteMethod(object parameter)
         {
-            return MyCommand.CanExecute(parameter);
+            return MyCommandDS.CanExecute(parameter);
         }
 
         private void ExecuteMethod(object parameter)
