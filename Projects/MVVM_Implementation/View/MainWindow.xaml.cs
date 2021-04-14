@@ -24,6 +24,5 @@ namespace MVVM_Implementation
         {
             InitializeComponent();
         }
-
     }
 }

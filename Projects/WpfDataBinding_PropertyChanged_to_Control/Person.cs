@@ -19,7 +19,7 @@ namespace WpfDataBinding
             set
             {
                 _wiek = value;
-                OnPropertyRaised("Wiek");
+                MyPropertyChangeMethodDS("Wiek");
             }
         }
 
@@ -33,15 +33,13 @@ namespace WpfDataBinding
             set
             {
                 _imie = value;
-                OnPropertyRaised("Imie");
+                MyPropertyChangeMethodDS("Imie");
             }
         }
 
-
         public event PropertyChangedEventHandler PropertyChanged;
 
-
-        private void OnPropertyRaised(string propertname)
+        private void MyPropertyChangeMethodDS(string propertname)
         {
             if (PropertyChanged != null)
             {

@@ -20,7 +20,6 @@
 
         <TextBox x:Name="textBoxWiek" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="76,48,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="textBoxImie" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="76,80,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-
         <TextBox Text="{Binding Path=Wiek, Mode=TwoWay}" Grid.Column="2" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Grid.Row="1" Margin="92,45,0,0"/>
         <TextBox Text="{Binding Path=Imie, Mode=TwoWay}" Grid.Column="2" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Grid.Row="1" Margin="92,80,0,0"/>
 
@@ -29,8 +28,8 @@
         <Label Content="Data Binding - zmiana propercji wpływa na zmianę w textBoxie" Grid.Column="2" HorizontalAlignment="Left" Margin="2,10,0,0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="385" RenderTransformOrigin="6.887,-0.84"/>
         <Label Content="Imie" Grid.Column="1" HorizontalAlignment="Left" Margin="6,76,0,0" Grid.Row="1" VerticalAlignment="Top" Height="26" Width="42"/>
 
-        <Button Content="Update Model" Grid.Column="1" HorizontalAlignment="Left" Margin="76,125,0,0" Grid.Row="1" VerticalAlignment="Top" Width="118" Height="20" Click="Button_Click"/>
-        <Button Content="Check model" Grid.Column="2" HorizontalAlignment="Left" Margin="92,125,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120" Click="Button_Click_1"/>
+        <Button Content="Save Text Boxes To Object" Grid.Column="1" HorizontalAlignment="Left" Margin="36,125,0,0" Grid.Row="1" VerticalAlignment="Top" Width="190" Height="20" Click="Button_Click_Update_Model"/>
+        <Button Content="Display Object" Grid.Column="2" HorizontalAlignment="Left" Margin="92,125,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120" Click="Button_Click_Check_Model"/>
 
     </Grid>
 </Window>

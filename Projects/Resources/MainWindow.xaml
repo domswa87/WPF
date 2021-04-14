@@ -5,14 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Resources"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="550" Width="800">
 
     <Window.Resources>
         <BitmapImage x:Key="MyImageSource" UriSource="obraz/domek.jpg" />
+        <SolidColorBrush Color="Red" x:Key="colorDS"/>
     </Window.Resources>
 
 
-    <Grid>
-        <Image Source="{StaticResource MyImageSource}" Margin="100,100" Width="100" Height="100"/>
-    </Grid>
+    <StackPanel>
+        <Image Source="{StaticResource MyImageSource}" Width="100" Height="100"/>
+        <Button Background="{StaticResource colorDS}" Content="Button Static Resource color" Width="400" Height="50" FontSize="15"/>
+        <Button Background="{StaticResource colorFrom_App_xaml_File}" Content="Button Static Resource color from config file" Width="400" Height="50" FontSize="15"/>
+        <Button Background="{DynamicResource DynamicColorDS}" Content="Button Dynamic resource color - visible after click" Width="400" Height="50" Click="Button_Click" FontSize="15"/>
+    </StackPanel>
 </Window>

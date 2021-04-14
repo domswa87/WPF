@@ -46,7 +46,7 @@ namespace MVVM_Implementation.Command
 
         public void Execute(object parameter)
         {
-            executeAction(parameter);
+            executeAction.Invoke(parameter);
         }
     }
 }

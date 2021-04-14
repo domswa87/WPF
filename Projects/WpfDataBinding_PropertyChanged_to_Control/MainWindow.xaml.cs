@@ -26,7 +26,7 @@ namespace WpfDataBinding
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click_Update_Model(object sender, RoutedEventArgs e)
         {
             Person person = new Person
             {
@@ -35,15 +35,14 @@ namespace WpfDataBinding
             };
             this.DataContext = person;
             Person = person;
-
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Button_Click_Check_Model(object sender, RoutedEventArgs e)
         {
-            if (DataContext != null)
-            {
-                MessageBox.Show(Person.Imie.ToString());
-            }
+            if (Person == null)
+                MessageBox.Show($"Object Person is null");
+            else
+                MessageBox.Show($"Name:{Person.Imie} Age:{Person.Wiek}");
         }
     }
 }

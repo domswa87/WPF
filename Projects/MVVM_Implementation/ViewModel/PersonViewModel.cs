@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 
 namespace MVVM_Implementation.ViewModel
@@ -32,41 +33,40 @@ namespace MVVM_Implementation.ViewModel
         }
 
         #region Commands
-        private void SubmitExecute(object parameter) 
+        private void MyMethod1(object parameter) 
         {
-            obj.FName = obj.FName + "a";
+            MessageBox.Show("MyMethod1");
         }
 
-        private void SubmitExecute2(object parameter)
+        private void MyMethod2(object parameter)
         {
-            PersonFName = PersonFName;
-
+            MessageBox.Show("MyMethod2");
         }
       
 
-        private ICommand _SubmitCommand;
-        public ICommand SubmitCommand
+        private ICommand _ChangeModelCommand;
+        public ICommand ChangeModelCommand
         {
             get
             {
-                if (_SubmitCommand == null)
+                if (_ChangeModelCommand == null)
                 {
-                    _SubmitCommand = new RelayCommand(SubmitExecute, CanSubmitExecute, false);
+                    _ChangeModelCommand = new RelayCommand(MyMethod1, CanSubmitExecute, false);
                 }
-                return _SubmitCommand;
+                return _ChangeModelCommand;
             }
         }
 
-        private ICommand _SubmitCommand2;
-        public ICommand SubmitCommand2
+        private ICommand _RefreshCommand;
+        public ICommand RefreshCommand
         {
             get
             {
-                if (_SubmitCommand2 == null)
+                if (_RefreshCommand == null)
                 {
-                    _SubmitCommand2 = new RelayCommand(SubmitExecute2, CanSubmitExecute, false);
+                    _RefreshCommand = new RelayCommand(MyMethod2, CanSubmitExecute, false);
                 }
-                return _SubmitCommand2;
+                return _RefreshCommand;
             }
         }
 
@@ -88,8 +88,7 @@ namespace MVVM_Implementation.ViewModel
         {
             if (PropertyChanged != null)
             {
-                // nie kumam tego
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+                PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
             }
         }
     }
