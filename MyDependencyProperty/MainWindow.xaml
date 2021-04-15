@@ -1,0 +1,25 @@
+﻿<Window 
+        x:Name="MyWindowDS"
+        x:Class="MyDependencyProperty.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyDependencyProperty"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <!--TUTORIAL LINK https://www.youtube.com/watch?v=gtAryodSiME&list=PLI-F7ydFjNpC2lJ6UI-ZA2FnwR3fiP1IZ&index=12-->
+    <StackPanel >
+        <!--Binding jest zrobiony po NORMAL PROPERTY - ALE ZEBY TO DZIAŁAŁO TO NORMAL PROPERTY MUSI BYĆ POŁĄCZONE Z DEPENDENCY PROPERTY-->
+        <!--DEPENDENCY PROPERTY jest STATIC i dlatego pod spodem system ma do tego dostęp i wie kiedy coś się zmieniło-->
+        <Label Content="{Binding ElementName=MyWindowDS, Path=NormalPropertyDS}" Height="100" Width="100" FontSize="30"></Label>
+        <Label>SET</Label>
+        <Button Content="Set Dependency Property Value to 1" Name="Set_Dependency1" Click="Set_Dependency1_Click"></Button>
+        <Button Content="Set Dependency Property Value to 2" Name="Set_Dependency2" Click="Set_Dependency2_Click"></Button>
+        <Button Content="SetNormalProperyValue to 3" Name="Set_Normal3" Click="Set_Normal3_Click"></Button>
+        <Button Content="SetNormalProperyValue to 4" Name="Set_Normal4" Click="Set_Normal4_Click"></Button>
+        <Label>GET</Label>
+        <Button Content="GetDependencyPropertyValue" Name="GetDependencyPropertyValue" Click="GetDependencyPropertyValue_Click"></Button>
+        <Button Content="GetNormalPropertyValue" Name="GetNormalPropertyValue" Click="GetNormalPropertyValue_Click"></Button>
+    </StackPanel>
+</Window>

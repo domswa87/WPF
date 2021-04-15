@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserControlView", "UserCont
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Styles", "Styles\Styles.csproj", "{C2CC52A9-F6BA-4AE6-AAF6-0087D1F271EA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Layouts", "Layouts\Layouts.csproj", "{E1D910C7-8697-4FA7-A3A3-7F40D91520E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDependencyProperty", "MyDependencyProperty\MyDependencyProperty.csproj", "{5430B3F4-2C38-46FC-BB90-F7A0DAAC970E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +79,14 @@ Global
 		{C2CC52A9-F6BA-4AE6-AAF6-0087D1F271EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2CC52A9-F6BA-4AE6-AAF6-0087D1F271EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2CC52A9-F6BA-4AE6-AAF6-0087D1F271EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1D910C7-8697-4FA7-A3A3-7F40D91520E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1D910C7-8697-4FA7-A3A3-7F40D91520E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1D910C7-8697-4FA7-A3A3-7F40D91520E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1D910C7-8697-4FA7-A3A3-7F40D91520E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5430B3F4-2C38-46FC-BB90-F7A0DAAC970E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5430B3F4-2C38-46FC-BB90-F7A0DAAC970E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5430B3F4-2C38-46FC-BB90-F7A0DAAC970E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5430B3F4-2C38-46FC-BB90-F7A0DAAC970E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,10 @@
+﻿<Application x:Class="Layouts.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Layouts"
+             StartupUri="WrapPanel.xaml">
+             <!--EDIT LINE ABOVE TO CHANGE START UP WINDOW-->
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>
