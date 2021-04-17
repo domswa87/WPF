@@ -12,7 +12,8 @@
     <Window.Resources>
         <vm:PersonViewModel x:Key="PersonViewModel"/>
     </Window.Resources>
-
+    <!--ViewModel jest spięty z widokiem poprzez Data Contex-->
+    <!--ViewModel posiada model i commands które są spięte z widokiem przez Binging-->
     <Grid DataContext="{Binding Source={StaticResource PersonViewModel}}" Margin="62,0,47,36" Height="275" VerticalAlignment="Bottom">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>

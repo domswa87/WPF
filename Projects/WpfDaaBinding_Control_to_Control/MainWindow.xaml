@@ -7,9 +7,20 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <StackPanel>
-        <Slider Name="SliderDS"  Maximum="1000"/>
-        <TextBox Text="{Binding ElementName=SliderDS, Path=Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-        <CheckBox x:Name="mainCheckBox" Content="mainCheckBox"/>
-        <CheckBox Content ="SecondCheckBox" IsChecked="{Binding ElementName=mainCheckBox, Path=IsChecked, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <Label>One way binding from pink to gray</Label>
+        <TextBox x:Name="TB1" Background="Pink"></TextBox>
+        <TextBox Text="{Binding ElementName=TB1, Path=Text, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Background="LightGray"/>
+        <Label>One way binding from gray to pink</Label>
+        <TextBox x:Name="TB2" Background="Pink"></TextBox>
+        <TextBox Text="{Binding ElementName=TB2, Path=Text, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}" Background="LightGray"/>
+        <Label>Two way binding</Label>
+        <TextBox x:Name="TB3" Background="Pink"></TextBox>
+        <TextBox Text="{Binding ElementName=TB3, Path=Text, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Background="LightGray"/>
+        <Label>Two way binding without UpdateSourceTrigger (change gray to see diference)</Label>
+        <TextBox x:Name="TB4" Background="Pink"></TextBox>
+        <TextBox Text="{Binding ElementName=TB4, Path=Text, Mode=TwoWay}" Background="LightGray"/>
+        <Label>Two way slider binding</Label>
+        <Slider Name="SliderDS1"  Maximum="1000" IsSnapToTickEnabled="True"/>
+        <TextBox Text="{Binding ElementName=SliderDS1, Path=Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
     </StackPanel>
 </Window>

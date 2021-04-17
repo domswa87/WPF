@@ -22,8 +22,8 @@ namespace MyDependencyProperty
     public partial class MainWindow : Window
     {
 
-        // Dependency properties 
-        // Propercje NORMAL PROPERTY i DEPENDENCY PROPERTY są połączone ze sobą  - dzięki temu mechanizmowy działa Bindinc
+        // Propercje NORMAL PROPERTY i DEPENDENCY PROPERTY są połączone ze sobą  - dzięki temu mechanizmowi działa Binding
+        // to create use snippet "propdp"
         public MainWindow()
         {
             InitializeComponent();
@@ -47,7 +47,7 @@ namespace MyDependencyProperty
 
         // DEPENDENCY PROPERTY
         // Using a DependencyProperty as the backing store for NormalPropertyDS.  This enables animation, styling, binding, etc...
-        // "propdp" snippet
+      
         public static readonly DependencyProperty DependencyPropertyDS =
             DependencyProperty.Register("NormalPropertyDS", typeof(int), typeof(MainWindow), new PropertyMetadata(0));
 
@@ -55,7 +55,6 @@ namespace MyDependencyProperty
 
         private void Set_Dependency1_Click(object sender, RoutedEventArgs e)
         {
-            // ustawia wartość również na NORMAL PROPERTY i sprawia że dziala Bindinc
             SetValue(DependencyPropertyDS, 1);
         }
 
