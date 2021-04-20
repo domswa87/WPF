@@ -1,0 +1,19 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:CustomControlEasy"
+                    xmlns:MyNameSpace="clr-namespace:CustomControlEasy.MyControls">
+    <Style TargetType="MyNameSpace:MyControl">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="MyNameSpace:MyControl">
+                    <StackPanel>
+                        <Label Content="Controls In My Style"/>
+                        <Button Background="Green" Content="Button 1 from MyControl Style"></Button>
+                        <Button Background="Blue" Content="Button 2 from MyControl Style"></Button>
+                        <Button Background="Pink" Content="Button 3 from MyControl Style"></Button>
+                    </StackPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
