@@ -25,42 +25,17 @@ namespace VisualStates
         public MainWindow()
         {
             InitializeComponent();
-            DispatcherTimer timer = new DispatcherTimer();
-            timer.Interval = new TimeSpan(0, 0, 1);
-            timer.Tick += Timer_Tick;
-           // timer.Start();
         }
 
-        private void Timer_Tick(object sender, EventArgs e)
+        private void GoToStateA_Click(object sender, RoutedEventArgs e)
         {
-            Counter ++;
-            if (Counter%5 == 0)
-            {
-                VisualStateManager.GoToState(MyButton, "MyState1", false);
-            }
-            else if (Counter % 3 == 0)
-            {
-                VisualStateManager.GoToState(MyButton, "MyState2", false);
-            }
-            else if(Counter % 1 == 0)
-            {
-                VisualStateManager.GoToState(MyButton, "MyState3", false);
-            }
+            VisualStateManager.GoToElementState(StackPanelWithStates, "StateA", true);
         }
 
-        private void MyButton_Click(object sender, RoutedEventArgs e)
+        private void GoToStateB_Click(object sender, RoutedEventArgs e)
         {
-            Counter++;
-            if (Counter % 5 == 0)
-            {
-                VisualStateManager.GoToState((FrameworkElement)sender, "FirstState", false);
-            }
-            else if (Counter % 3 == 0)
-            {
-                VisualStateManager.GoToState((FrameworkElement)sender, "SecondState", false);
-            }
-
+            VisualStateManager.GoToElementState(StackPanelWithStates, "StateB", true);
         }
-     
+    
     }
 }

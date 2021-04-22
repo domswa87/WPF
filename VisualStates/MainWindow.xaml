@@ -7,9 +7,32 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
 
-   <!--ToDo-->
-
-    <StackPanel>
-        <Button Content="ClickMe"></Button>
+    <StackPanel x:Name="StackPanelWithStates">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="MyGroup">
+                <VisualStateGroup.Transitions>
+                    <VisualTransition GeneratedDuration="0:0:1" To="StateA"/>
+                    <VisualTransition GeneratedDuration="0:0:5" To="StateB"/>
+                </VisualStateGroup.Transitions>
+                <VisualState x:Name="StateA">
+                    <Storyboard>
+                        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="FontSize" Storyboard.TargetName="StateButton">
+                            <EasingDoubleKeyFrame KeyTime="1" Value="26"/>
+                        </DoubleAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="StateB">
+                    <Storyboard>
+                        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="FontSize" Storyboard.TargetName="StateButton">
+                            <EasingDoubleKeyFrame KeyTime="3" Value="8"/>
+                        </DoubleAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <Button x:Name="StateButton" Content="StateButton"></Button>
+        <Button x:Name="GoToStateA" Content="GoToStateA" Click="GoToStateA_Click" ></Button>
+        <Button x:Name="GoToStateB" Content="GoToStateB" Click="GoToStateB_Click" ></Button>
+        <Button x:Name="GoToStateNormal" Content="GoToStateNormal" Click="GoToStateNormal_Click" ></Button>
     </StackPanel>
 </Window>
